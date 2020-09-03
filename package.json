@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-one",
+  "version": "0.0.1",
+  "description": "Personal portfolio web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chunkybyte/portfolio-one.git"
+  },
+  "keywords": [
+    "portfolio",
+    "ekansh",
+    "kothiyal"
+  ],
+  "author": "Ekansh Kothiyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chunkybyte/portfolio-one/issues"
+  },
+  "homepage": "https://github.com/chunkybyte/portfolio-one#readme"
+}
