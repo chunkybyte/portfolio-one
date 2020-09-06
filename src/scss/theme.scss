@@ -1,0 +1,112 @@
+@import './reset';
+@import './variables';
+@import './utilities';
+
+body {
+    font-size: $base-font-size;
+    background-color: $primary-color;
+}
+.container {
+    height: 100vh;
+}
+main {
+    height: 100%;
+    padding: 30px;
+    flex: 1;
+    flex-direction: column;
+
+    font-family: $font-text-primary;
+}
+header {
+    padding: 10px 0;
+    .image-wrapper {
+        flex: 1;
+        .image-logo {
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
+        }
+    }
+}
+.hi-message {
+    font-family: $font-text-hindi;
+    margin: 0 10px 12px 0;
+    font-size: 32px;
+    text-align: right;
+}
+.main-title {
+    h1 {
+        margin-left: auto;
+        font-size: 112px;
+        line-height: 0.83;
+        letter-spacing: 2px;
+        text-align: right;
+        font-family: $font-heading-primary;
+    
+        .firstName {
+            font-size: 125px;
+            color: $text-primary-color;
+        }
+        .lastName {
+            color: $text-tertiary-color;
+        }
+    }
+}
+.main-alterego {
+    margin-top: 40px;
+    text-align: right;
+    font-size: 20px;
+    letter-spacing: 40px;
+    margin-right: -32px;
+}
+.general {
+    h2 {
+        font-size: 40px;
+    }
+    .passionate-subtitle {
+        margin-top: 10px;
+        hr, p {
+            display: inline-block;
+        }
+
+        hr {
+            width: 66px;
+            border: none;
+            border-bottom: 12px solid #333;
+        }
+    }
+}
+.salute {
+    flex: 1;
+
+    .main-description {
+        margin-top: 20px;
+        text-align: right;
+        font-family: $font-text-primary;
+        font-size: 13px;
+        line-height: 1.75;
+    }
+}
+
+footer {
+    font-family: $font-text-primary;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 50px 80px;
+
+        flex-direction: row;
+
+        .general {
+            align-self: flex-end;
+        }
+    }
+    .main-title {
+        h1 {
+            width: 500px;
+        }
+    }
+}
