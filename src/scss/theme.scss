@@ -3,8 +3,22 @@
 @import './utilities';
 
 body {
+    position: relative;
     font-size: $base-font-size;
     background-color: $primary-color;
+}
+.noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-size: cover;
+    background-image: url('./../../assets/images/noise-1.jpg');
+    opacity: 0.1;
+    animation: noise 0.1s linear infinite;
 }
 .container {
     max-width: 1280px;
@@ -40,6 +54,7 @@ header {
 .main-title {
     h1 {
         margin-left: auto;
+        width: 250px;
         font-size: 43px;
         line-height: 0.83;
         letter-spacing: 2px;
@@ -63,6 +78,7 @@ header {
     margin-right: -7px;
 }
 .general {
+    margin-top: 40px;
     text-align: center;
 
     h2 {
@@ -113,6 +129,7 @@ footer {
         flex-direction: row;
 
         .general {
+            margin-top: 0;
             align-self: flex-end;
             text-align: left;
 
@@ -153,5 +170,13 @@ footer {
     .hi-message {
         margin: 0 10px 12px 0;
         font-size: 32px;
+    }
+}
+@keyframes noise {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 10000px 10000px;
     }
 }
