@@ -7,11 +7,13 @@ body {
     background-color: $primary-color;
 }
 .container {
+    max-width: 1280px;
+    margin: 0 auto;
     height: 100vh;
 }
 main {
     height: 100%;
-    padding: 30px;
+    padding: 20px;
     flex: 1;
     flex-direction: column;
 
@@ -23,28 +25,28 @@ header {
         flex: 1;
         .image-logo {
             margin: 0 auto;
-            width: 100px;
+            width: 70px;
             height: auto;
         }
     }
 }
 .hi-message {
     font-family: $font-text-hindi;
-    margin: 0 10px 12px 0;
-    font-size: 32px;
+    margin: 0 10px 4px 0;
+    font-size: 25px;
     text-align: right;
 }
 .main-title {
     h1 {
         margin-left: auto;
-        font-size: 112px;
+        font-size: 43px;
         line-height: 0.83;
         letter-spacing: 2px;
         text-align: right;
         font-family: $font-heading-primary;
     
         .firstName {
-            font-size: 125px;
+            font-size: 49px;
             color: $text-primary-color;
         }
         .lastName {
@@ -53,24 +55,26 @@ header {
     }
 }
 .main-alterego {
-    margin-top: 40px;
+    margin-top: 12px;
     text-align: right;
     font-size: 20px;
-    letter-spacing: 40px;
-    margin-right: -32px;
+    letter-spacing: 9.5px;
+    margin-right: -7px;
 }
 .general {
+    text-align: center;
+
     h2 {
-        font-size: 40px;
+        font-size: 26px;
     }
-    .passionate-subtitle {
+    .passionate-subtitle {  
         margin-top: 10px;
         hr, p {
             display: inline-block;
         }
 
         hr {
-            width: 66px;
+            width: 7px;
             border: none;
             border-bottom: 12px solid #333;
         }
@@ -95,6 +99,13 @@ footer {
 }
 
 @media (min-width: 768px) {
+    header {
+        .image-wrapper {
+            .image-logo {
+                width: 100px;
+            }
+        }
+    }
     main {
         padding: 50px 80px;
 
@@ -102,11 +113,44 @@ footer {
 
         .general {
             align-self: flex-end;
+            text-align: left;
+
+            h2 {
+                font-size: 40px;
+            }
+            .passionate-subtitle {
+                margin-top: 10px;
+
+                hr {
+                    width: 66px;
+                }
+            }
+        }
+
+        .salute {
+            .main-description {
+                width: 350px;
+                margin-left: auto;
+            }
         }
     }
     .main-title {
         h1 {
             width: 500px;
+            font-size: 112px;
+            .firstName {
+                font-size: 125px;
+            }
         }
+    }
+    .main-alterego {
+        margin-top: 40px;
+        font-size: 20px;
+        letter-spacing: 40px;
+        margin-right: -32px;
+    }
+    .hi-message {
+        margin: 0 10px 12px 0;
+        font-size: 32px;
     }
 }
