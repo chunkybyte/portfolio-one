@@ -1,0 +1,148 @@
+@import './../theme';
+
+main {
+    height: 100%;
+    padding: 20px;
+    flex: 1;
+    flex-direction: column;
+
+    font-family: $font-text-primary;
+}
+header {
+    padding: 10px 0;
+    .image-wrapper {
+        flex: 1;
+        .image-logo {
+            margin: 0 auto;
+            width: 70px;
+            height: auto;
+        }
+    }
+}
+.hi-message {
+    font-family: $font-text-hindi;
+    margin: 0 10px 4px 0;
+    font-size: 25px;
+    text-align: right;
+}
+.main-title {
+    h1 {
+        margin-left: auto;
+        width: 250px;
+        font-size: 43px;
+        line-height: 0.83;
+        letter-spacing: 2px;
+        text-align: right;
+        font-family: $font-heading-primary;
+    
+        .firstName {
+            font-size: 49px;
+            color: $text-primary-color;
+        }
+        .lastName {
+            color: $text-tertiary-color;
+        }
+    }
+}
+.main-alterego {
+    margin-top: 12px;
+    text-align: right;
+    font-size: 20px;
+    letter-spacing: 9.5px;
+    margin-right: -7px;
+}
+.general {
+    margin-top: 40px;
+    text-align: center;
+
+    h2 {
+        font-size: 26px;
+    }
+    .passionate-subtitle {  
+        margin-top: 10px;
+        hr, p {
+            display: inline-block;
+        }
+
+        hr {
+            width: 7px;
+            border: none;
+            border-bottom: 12px solid #333;
+        }
+    }
+}
+.salute {
+    flex: 1;
+
+    .main-description {
+        margin-top: 20px;
+        text-align: right;
+        font-family: $font-text-primary;
+        font-size: 13px;
+        line-height: 1.75;
+    }
+}
+
+footer {
+    font-family: $font-text-primary;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    header {
+        .image-wrapper {
+            .image-logo {
+                width: 100px;
+            }
+        }
+    }
+    main {
+        padding: 50px 80px;
+
+        flex-direction: row;
+
+        .general {
+            margin-top: 0;
+            align-self: flex-end;
+            text-align: left;
+
+            h2 {
+                font-size: 40px;
+            }
+            .passionate-subtitle {
+                margin-top: 10px;
+
+                hr {
+                    width: 66px;
+                }
+            }
+        }
+
+        .salute {
+            .main-description {
+                width: 350px;
+                margin-left: auto;
+            }
+        }
+    }
+    .main-title {
+        h1 {
+            width: 500px;
+            font-size: 112px;
+            .firstName {
+                font-size: 125px;
+            }
+        }
+    }
+    .main-alterego {
+        margin-top: 40px;
+        font-size: 20px;
+        letter-spacing: 40px;
+        margin-right: -32px;
+    }
+    .hi-message {
+        margin: 0 10px 12px 0;
+        font-size: 32px;
+    }
+}
