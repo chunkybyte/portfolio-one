@@ -1,7 +1,6 @@
 'use strict';
 
 var App = function () {
-    var self = this;
     return {
         setCustomViewportHeight: function setCustomViewportHeight() {
             var vh = window.innerHeight * 0.01;

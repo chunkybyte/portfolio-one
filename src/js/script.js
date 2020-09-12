@@ -1,5 +1,4 @@
 const App = (function () {
-    const self = this;
     return {
         setCustomViewportHeight: () => {
             let vh = window.innerHeight * 0.01;

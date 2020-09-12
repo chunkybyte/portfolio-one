@@ -43,6 +43,9 @@ header {
             color: $text-tertiary-color;
         }
     }
+    .brand-name__element {
+        display: inline-block;
+    }
 }
 .main-alterego {
     margin-top: 12px;
@@ -54,11 +57,17 @@ header {
 .general {
     margin-top: 40px;
     text-align: center;
-
+    
     h2 {
         font-size: 26px;
+        overflow: hidden;
+
+        .line {
+            display: inline-block;
+        }
     }
     .passionate-subtitle {  
+        overflow: hidden;
         margin-top: 10px;
         hr, p {
             display: inline-block;
@@ -73,6 +82,7 @@ header {
 }
 .salute {
     flex: 1;
+    overflow: hidden;
 
     .main-description {
         margin-top: 20px;
