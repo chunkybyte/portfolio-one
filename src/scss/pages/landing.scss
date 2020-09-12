@@ -16,9 +16,32 @@ header {
 
         .image-logo {
             margin: 0 auto;
-            width: 70px;
+            width: 170px;
             height: auto;
         }
+    }
+}
+#welcome-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    .welcome-message {        
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        overflow: hidden;
+
+        p {
+            font-family: $font-text-hindi;
+            font-size: 25px;
+            text-align: center;
+
+        }  
     }
 }
 .hi-message {
@@ -121,7 +144,7 @@ footer {
     header {
         .image-wrapper {            
             .image-logo {
-                width: 100px;
+                width: 250px;
             }
         }
     }

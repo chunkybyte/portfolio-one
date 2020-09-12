@@ -24,6 +24,7 @@ var Alive = function () {
                 ease: 'expo',
                 y: 200
             }, '-=0.8').from(brandnameEL, {
+                delay: 1,
                 opacity: 0,
                 duration: 1,
                 ease: 'expo',
