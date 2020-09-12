@@ -5,15 +5,30 @@
  */
 var Alive = function () {
     return {
+        animateBrandLogo: function animateBrandLogo(landerTL) {
+            var brandnameEL = document.querySelectorAll('.image-logo');
+            landerTL.from(brandnameEL, {
+                opacity: 0,
+                duration: 1,
+                ease: 'power4',
+                y: -200
+            });
+        },
         animateMainLogo: function animateMainLogo(landerTL) {
+            var hiMsgEl = document.querySelector('.hi-message p');
             var brandnameEL = document.querySelectorAll('#brand-name');
             var brandSubEl = document.querySelector('#brand-sub-title');
-            landerTL.from(brandnameEL, {
+            landerTL.from(hiMsgEl, {
                 opacity: 0,
                 duration: 1,
                 ease: 'expo',
                 y: 200
-            }).from(brandSubEl, {
+            }, '-=0.8').from(brandnameEL, {
+                opacity: 0,
+                duration: 1,
+                ease: 'expo',
+                y: 200
+            }, '-=0.8').from(brandSubEl, {
                 opacity: 0,
                 duration: 1.5,
                 ease: 'expo',
@@ -32,7 +47,7 @@ var Alive = function () {
             });
         },
         animateJobSubtitle: function animateJobSubtitle(landerTL) {
-            var jobSubtitle = document.querySelector('.passionate-subtitle p');
+            var jobSubtitle = document.querySelector('.passionate-subtitle p span');
             var jobSubtitleHR = document.querySelector('.passionate-subtitle hr');
             landerTL.from(jobSubtitleHR, {
                 opacity: 0,
@@ -48,6 +63,7 @@ var Alive = function () {
         },
         init: function init() {
             var landerTL = gsap.timeline();
+            Alive.animateBrandLogo(landerTL);
             Alive.animateMainLogo(landerTL);
             Alive.animateJobTitle(landerTL);
             Alive.animateJobSubtitle(landerTL);

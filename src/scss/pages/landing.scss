@@ -4,7 +4,7 @@ main {
     height: 100%;
     padding: 20px;
     flex: 1;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     font-family: $font-text-primary;
 }
@@ -12,6 +12,8 @@ header {
     padding: 10px 0;
     .image-wrapper {
         flex: 1;
+        overflow: hidden;
+
         .image-logo {
             margin: 0 auto;
             width: 70px;
@@ -23,16 +25,21 @@ header {
     font-family: $font-text-hindi;
     margin: 0 10px 4px 0;
     font-size: 25px;
-    text-align: right;
+    text-align: left;
+
+    overflow: hidden;
 }
 .main-title {
+    padding: 10px 0;
+    overflow: hidden;
+
     h1 {
-        margin-left: auto;
+        margin-right: auto;
         width: 250px;
         font-size: 43px;
         line-height: 0.83;
         letter-spacing: 2px;
-        text-align: right;
+        text-align: left;
         font-family: $font-heading-primary;
     
         .firstName {
@@ -49,7 +56,7 @@ header {
 }
 .main-alterego {
     margin-top: 12px;
-    text-align: right;
+    text-align: left;
     font-size: 20px;
     letter-spacing: 9.5px;
     margin-right: -7px;
@@ -69,6 +76,10 @@ header {
     .passionate-subtitle {  
         overflow: hidden;
         margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         hr, p {
             display: inline-block;
         }
@@ -78,6 +89,13 @@ header {
             border: none;
             border-bottom: 12px solid #333;
         }
+        p {
+            margin-left: 5px;
+            overflow: hidden;
+            span {
+                display: inline-block;
+            }
+        }
     }
 }
 .salute {
@@ -86,7 +104,7 @@ header {
 
     .main-description {
         margin-top: 20px;
-        text-align: right;
+        text-align: left;
         font-family: $font-text-primary;
         font-size: 13px;
         line-height: 1.75;
@@ -101,7 +119,7 @@ footer {
 
 @media (min-width: 768px) {
     header {
-        .image-wrapper {
+        .image-wrapper {            
             .image-logo {
                 width: 100px;
             }
@@ -132,11 +150,12 @@ footer {
         .salute {
             .main-description {
                 width: 350px;
-                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
     .main-title {
+        padding: 20px 0;
         h1 {
             width: 500px;
             font-size: 112px;

@@ -3,16 +3,33 @@
  */
 const Alive = (function () {
     return {
+        animateBrandLogo: (landerTL) => {
+            const brandnameEL = document.querySelectorAll('.image-logo');
+            landerTL
+                .from(brandnameEL, {
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power4',
+                    y: -200
+                });
+        },
         animateMainLogo: (landerTL) => {
+            const hiMsgEl = document.querySelector('.hi-message p');
             const brandnameEL = document.querySelectorAll('#brand-name');
             const brandSubEl = document.querySelector('#brand-sub-title');
             landerTL
+                .from(hiMsgEl, {
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'expo',
+                    y: 200
+                }, '-=0.8')
                 .from(brandnameEL, {
                     opacity: 0,
                     duration: 1,
                     ease: 'expo',
                     y: 200
-                })
+                }, '-=0.8')
                 .from(brandSubEl, {
                     opacity: 0,
                     duration: 1.5,
@@ -33,7 +50,7 @@ const Alive = (function () {
             });
         },
         animateJobSubtitle: (landerTL) => {
-            const jobSubtitle = document.querySelector('.passionate-subtitle p');
+            const jobSubtitle = document.querySelector('.passionate-subtitle p span');
             const jobSubtitleHR = document.querySelector('.passionate-subtitle hr');
             landerTL
                 .from(jobSubtitleHR, {
@@ -51,6 +68,7 @@ const Alive = (function () {
         },
         init: () => {
             const landerTL = gsap.timeline();
+            Alive.animateBrandLogo(landerTL);
             Alive.animateMainLogo(landerTL);
             Alive.animateJobTitle(landerTL);
             Alive.animateJobSubtitle(landerTL);
