@@ -3,15 +3,52 @@
  */
 const Alive = (function () {
     return {
+        animateWelcomScreen: (landerTL) => {
+            const welcomeEl = document.querySelectorAll('#welcome-screen p span');
+
+            welcomeEl.forEach( (el, i) => {
+                let args = {
+                    delayFrom: 0,
+                    delayTo: 0
+                }
+
+                landerTL
+                    .from(el, {
+                        delay: args.delayFrom,
+                        opacity: 1,
+                        duration: 2,
+                        ease: 'power4',
+                        y: 200
+                    })
+                    .to(el, {
+                        opacity: 0,
+                        duration: 2,
+                        ease: 'power4',
+                        y: -100,
+                        onComplete: function () {
+                            console.log(this._targets[0]);
+                            this._targets[0].style.display = 'none';
+                        }
+                    });
+            });
+
+        },
         animateBrandLogo: (landerTL) => {
-            const brandnameEL = document.querySelectorAll('.image-logo');
+            const brandnameEL = document.querySelector('.image-logo');
+            const footerYear = document.querySelector('.year-stamp');
             landerTL
                 .from(brandnameEL, {
                     opacity: 0,
                     duration: 1,
                     ease: 'power4',
                     y: -200
-                });
+                }, '-=1.5')
+                .from(footerYear, {
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power4',
+                    y: 200
+                }, '-=2');
         },
         animateMainLogo: (landerTL) => {
             const hiMsgEl = document.querySelector('.hi-message p');
@@ -69,6 +106,7 @@ const Alive = (function () {
         },
         init: () => {
             const landerTL = gsap.timeline();
+            Alive.animateWelcomScreen(landerTL);
             Alive.animateBrandLogo(landerTL);
             Alive.animateMainLogo(landerTL);
             Alive.animateJobTitle(landerTL);

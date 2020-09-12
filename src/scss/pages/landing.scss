@@ -22,25 +22,29 @@ header {
     }
 }
 #welcome-screen {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: transparent;
+    z-index: -1;
     .welcome-message {        
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-content: center;
         height: 100%;
-        overflow: hidden;
-
+        
         p {
             font-family: $font-text-hindi;
-            font-size: 25px;
+            font-size: 50px;
             text-align: center;
+            overflow: hidden;
 
+            span {
+                display: block;
+            }
         }  
     }
 }
@@ -138,6 +142,11 @@ footer {
     font-family: $font-text-primary;
     text-align: center;
     padding-bottom: 10px;
+    overflow: hidden;
+
+    .year-stamp {
+        display: inline-block;
+    }
 }
 
 @media (min-width: 768px) {
