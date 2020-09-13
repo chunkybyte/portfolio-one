@@ -10,18 +10,80 @@
 <body>
     <div class="noise"></div>
     <div class="container flex flex-column">
-        <header class="flex justify-center">
+        <header class="flex justify-center flex-column">
             <div class="image-wrapper">
                 <img class="image-logo" src="./assets/images/ekanshkothiyal.png" alt="Ekansh Kothiyal | chunkybyte">
             </div>
+            <div class="flex justify-space-between nav-links">
+                <div class="nav-side overflow-hidden flex-1 left-nav-links">
+                    <!-- <span class="inline-block">:alter</span> -->
+                </div>
+                <div class="nav-side overflow-hidden flex-1 right-nav-links">
+                    <button id="contact-screen-btn">Contact</button>
+                </div>
+            </div>
         </header>
         <main class="flex">
+            <!-- Welcome Screen -->
             <section id="welcome-screen">
                 <div class="welcome-message">
                     <p>
                         <!-- <span>नमस्ते!</span> -->
-                        <span>hey you <3</span>
+                        <span>hey you!</span>
                     </p>
+                </div>
+            </section>
+            <!-- Contact Screen -->
+            <section id="contact-screen">
+                <div class="noise"></div>
+                <div class="close-wrapper">
+                    <button class="close-btn">X</button>
+                </div>
+                <div class="contact-content flex flex-column">
+                    <h2 class="overflow-hidden">
+                        <span class="inline-block">
+                            Get in touch<p>for a beer/chai tea!</p>
+                        </span>
+                    </h2>
+                    <div class="social-links-wrapper flex">
+                        <div class="social-title overflow-hidden">
+                            <p>social</p>
+                        </div>
+                        <div class="social-preview-wrapper">
+                            <ul class="social-links">
+                                <li>
+                                    <a href="https://www.linkedin.com/in/ekanshkothiyal/" class="nav-link">
+                                        <span data-social="LinkedIn">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/devchunkybyte" class="nav-link">
+                                        <span data-social="Twitter">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dev.to/chunkybyte" class="nav-link">
+                                        <span data-social="DEV">DEV</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/chunkybyte" class="nav-link">
+                                        <span data-social="GitHub">GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://medium.com/@ekothiyal" class="nav-link">
+                                        <span data-social="Medium">Medium</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cutt.ly/MfI7szm" class="nav-link">
+                                        <span data-social="Tinder">Tinder</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="salute flex flex-column justify-flex-end">

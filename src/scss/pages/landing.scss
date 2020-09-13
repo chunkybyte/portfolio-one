@@ -10,7 +10,15 @@ main {
 }
 header {
     padding: 10px 0;
+    flex-direction: column-reverse !important;
+    
+    #contact-screen-btn {
+        cursor: pointer;
+        border: none;
+    }
     .image-wrapper {
+        position: relative;
+        // z-index: 2;
         flex: 1;
         overflow: hidden;
 
@@ -20,14 +28,131 @@ header {
             height: auto;
         }
     }
+    .nav-links {
+        padding: 0 10px 20px 0;
+        font-family: $font-text-primary;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 20px;
+        
+        .nav-side {
+            span {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .right-nav-links {
+            text-align: right;
+        }
+    }
 }
-#welcome-screen {
-    position: absolute;
+#contact-screen, #welcome-screen {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
+}
+#contact-screen {
+    display: none;
+    background: $secondary-color;
+    background: #fff;
+    z-index: 1;
+
+    .close-wrapper {
+        padding: 20px;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid gray;
+            padding: 9px 13px;
+        }
+    }
+
+    .contact-content {
+        height: 100%;
+        padding: 20px;
+        justify-content: center;
+        align-items: flex-start;
+
+        h2 {
+            font-family: $font-heading-primary;
+            font-size: 30px;
+
+            p {
+                font-size: 19.8px;
+                background: #ee0979;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .social-links-wrapper {
+            margin-top: 20px;
+            font-family: $font-heading-primary;
+            .social-title {
+                p {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $text-tertiary-color;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $text-tertiary-color;
+                }
+            }
+            .social-links {
+                margin-left: 40px;
+                font-size: 24px;
+                font-weight: bold;
+
+                li {
+                    overflow: hidden;
+                    padding-bottom: 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                        display: inline-block;
+                        
+                        span {
+                            position: relative;
+                            display: block;
+
+                            &:before {
+                                width: 0;
+                                overflow: hidden;
+                                position: absolute;
+                                content: attr(data-social);
+                                transition: all 0.8s cubic-bezier(0.84, 0, 0.08, 0.99);
+
+                                background: #ee0979;  /* fallback for old browsers */
+                                background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+                                background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+
+                            &:hover:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#welcome-screen {
+    background: $primary-color;
     z-index: -1;
     .welcome-message {        
         display: flex;
@@ -89,8 +214,8 @@ header {
     margin-right: -7px;
 }
 .general {
-    margin-top: 40px;
-    text-align: center;
+    margin-top: 20px;
+    text-align: left;
     
     h2 {
         font-size: 26px;
@@ -104,7 +229,7 @@ header {
         overflow: hidden;
         margin-top: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
         hr, p {
@@ -151,10 +276,19 @@ footer {
 
 @media (min-width: 768px) {
     header {
+        flex-direction: column !important;
+
+        #contact-screen-btn {
+            border: 2px solid $text-tertiary-color;
+        }
+
         .image-wrapper {            
             .image-logo {
                 width: 250px;
             }
+        }
+        .nav-links {
+            padding: 0;
         }
     }
     main {
@@ -197,13 +331,36 @@ footer {
         }
     }
     .main-alterego {
-        margin-top: 40px;
+        margin-top: 12px;
         font-size: 20px;
         letter-spacing: 40px;
         margin-right: -32px;
     }
     .hi-message {
-        margin: 0 10px 12px 0;
         font-size: 32px;
+    }
+    #contact-screen {
+        .close-wrapper {
+            padding: 20px;
+            top: 40px;
+            right: 40px;
+    
+            .close-btn {
+                font-size: 25px;
+                padding: 0.75em 1em;
+            }
+        }
+        
+        .contact-content {
+            padding: 20px 40px;
+
+            h2 {
+                font-size: 70px;
+
+                p {
+                    font-size: 46px;
+                }
+            }
+        }
     }
 }
