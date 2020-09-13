@@ -200,6 +200,20 @@ header {
         }
         .lastName {
             color: $text-tertiary-color;
+
+            background: #3E5151;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            height: 45px;
+            &.hover-text-effect {
+                &:before {
+                    height: 45px;
+                }
+            }
         }
     }
     .brand-name__element {
@@ -207,7 +221,6 @@ header {
     }
 }
 .main-alterego {
-    margin-top: 12px;
     text-align: left;
     font-size: 20px;
     letter-spacing: 9.5px;
@@ -321,17 +334,24 @@ footer {
         }
     }
     .main-title {
-        padding: 20px 0;
         h1 {
             width: 500px;
             font-size: 112px;
             .firstName {
                 font-size: 125px;
             }
+            .lastName {
+                height: 120px;
+
+                &.hover-text-effect {
+                    &:before {
+                        height: 120px;
+                    }
+                }
+            }
         }
     }
     .main-alterego {
-        margin-top: 12px;
         font-size: 20px;
         letter-spacing: 40px;
         margin-right: -32px;

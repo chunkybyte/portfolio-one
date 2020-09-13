@@ -25,3 +25,26 @@
 .overflow-hidden {
     overflow: hidden;
 }
+.hover-text-effect {
+    position: relative;
+    display: block;
+
+    &:before {
+        width: 0;
+        // overflow: hidden;
+        position: absolute;
+        content: attr(data-text);
+        transition: all 0.8s cubic-bezier(0.84, 0, 0.08, 0.99);
+
+        background: #ee0979;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &:hover:before {
+        width: 100%;
+    }
+}
