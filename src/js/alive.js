@@ -17,14 +17,12 @@ const Alive = (function () {
                     .from(el, {
                         delay: args.delayFrom,
                         opacity: 1,
-                        duration: 2,
+                        duration: 1.5,
                         ease: 'power4',
                         y: 200
                     })
                     .to(el, {
                         opacity: 0,
-                        duration: 2,
-                        ease: 'power4',
                         y: -100,
                         onComplete: function () {
                             this._targets[0].style.display = 'none';
