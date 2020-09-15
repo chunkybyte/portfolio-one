@@ -117,10 +117,16 @@ header {
                     overflow: hidden;
                     padding-bottom: 20px;
 
+                    &:nth-child(even) {
+                        a {
+                            color: $text-tertiary-color;
+                        }
+                    }
+
                     a {
                         text-decoration: none;
-                        color: #333;
                         display: inline-block;
+                        color: $text-primary-color;
                         
                         span {
                             position: relative;
@@ -153,10 +159,16 @@ header {
 }
 #blogs-screen {
     .social-title {
-        min-width: 60px;
+        min-width: 45px;
+
+        p {
+            font-size: 12px;
+        }
     }
     .social-links {
         font-size: 16px;
+        margin-left: 20px;
+
         li {
             padding-bottom: 10px;
             a {
@@ -164,7 +176,6 @@ header {
                     &:before {
                         display: none;
                     }
-
                     &:hover {
                         text-decoration: underline;
                     }
@@ -407,8 +418,18 @@ footer {
         }
     }
     #blogs-screen {
+        .social-title {
+            min-width: 60px;
+
+            p {
+                font-size: 16px;
+            }
+        }
         .social-links {
+            margin-left: 40px;
             font-size: 24px;
+            max-width: 70%;
+
             li {
                 padding-bottom: 20px;
             }
