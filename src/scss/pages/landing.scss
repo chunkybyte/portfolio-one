@@ -12,7 +12,7 @@ header {
     padding: 10px 0;
     flex-direction: column-reverse !important;
     
-    #contact-screen-btn {
+    #contact-screen-btn, .screen-btn {
         cursor: pointer;
         border: none;
     }
@@ -47,14 +47,14 @@ header {
         }
     }
 }
-#contact-screen, #welcome-screen {
+#contact-screen, #welcome-screen, .overlay-section-screen {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
-#contact-screen {
+#contact-screen, .overlay-section-screen {
     display: none;
     background: $secondary-color;
     background: #fff;
@@ -151,6 +151,28 @@ header {
         }
     }
 }
+#blogs-screen {
+    .social-title {
+        min-width: 60px;
+    }
+    .social-links {
+        font-size: 16px;
+        li {
+            padding-bottom: 10px;
+            a {
+                span {
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
 #welcome-screen {
     background: $primary-color;
     z-index: -1;
@@ -199,6 +221,7 @@ header {
             color: $text-primary-color;
         }
         .lastName {
+            padding-top: 2px;
             color: $text-tertiary-color;
 
             background: #3E5151;  /* fallback for old browsers */
@@ -291,7 +314,7 @@ footer {
     header {
         flex-direction: column !important;
 
-        #contact-screen-btn {
+        #contact-screen-btn, .screen-btn {
             border: 2px solid $text-tertiary-color;
         }
 
@@ -359,7 +382,7 @@ footer {
     .hi-message {
         font-size: 32px;
     }
-    #contact-screen {
+    #contact-screen, .overlay-section-screen {
         .close-wrapper {
             padding: 20px;
             top: 40px;
@@ -380,6 +403,14 @@ footer {
                 p {
                     font-size: 46px;
                 }
+            }
+        }
+    }
+    #blogs-screen {
+        .social-links {
+            font-size: 24px;
+            li {
+                padding-bottom: 20px;
             }
         }
     }
