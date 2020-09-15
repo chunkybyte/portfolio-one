@@ -2,7 +2,9 @@
 This is my personal (landing page only) portfolio using Greensock animation.
 
 This project is made in Vanilla Javascript and uses SASS and basic CSS Animations to make it feel more "alive". 
+
 No fancy frameworks.
+
 No build processes.
 
 [Hope you like it!](https://ekansh-kothiyal.netlify.app/)
