@@ -9,7 +9,7 @@ const App = (function () {
             const yearOfExperience = document.querySelector('.main-description #dev-years');
             const date = new Date();
             footerTimeStamp.innerHTML = date.getFullYear();
-            yearOfExperience.innerHTML = new Date(date - new Date('2016-07-01')).getFullYear() - 1970;
+            yearOfExperience.innerHTML = new Date(date - new Date('2016-01-01')).getFullYear() - 1970;
         },
         init: () => {
             App.setTimeStamps();
